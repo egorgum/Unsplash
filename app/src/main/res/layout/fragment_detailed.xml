@@ -1,0 +1,144 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragments.DetailedFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/ivShare"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="@id/tbShare"
+                app:layout_constraintTop_toTopOf="@id/tbShare"
+                app:layout_constraintBottom_toBottomOf="@id/tbShare"
+                app:srcCompat="@drawable/ic_baseline_share_24" />
+
+
+        <ImageView
+            android:id="@+id/ivPhotoDetailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/tbShare"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            tools:src="@tools:sample/avatars" />
+        <ImageView
+            android:id="@+id/ivLike"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPhotoDetailed"
+            app:srcCompat="@drawable/ic_baseline_thumb_up_black" />
+        <TextView
+            android:id="@+id/tvLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:text="1"
+            app:layout_constraintEnd_toEndOf="@+id/ivLike"
+            app:layout_constraintStart_toStartOf="@+id/ivLike"
+            app:layout_constraintTop_toBottomOf="@+id/ivLike" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivLike"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/ivLike" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="name"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/ivLike" />
+        <TextView
+            android:id="@+id/tvExif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/made_with"
+            app:layout_constraintStart_toStartOf="@id/avatar"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:textColor="@color/design_default_color_secondary_variant"
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/located_in"
+            app:layout_constraintStart_toStartOf="@id/tvExif"
+            app:layout_constraintTop_toBottomOf="@id/tvExif"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tags"
+            app:layout_constraintStart_toStartOf="@id/tvLocation"
+            app:layout_constraintTop_toBottomOf="@id/tvLocation"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"/>
+        <ImageView
+            android:id="@+id/ivDownload"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTags"
+            app:srcCompat="@drawable/ic_baseline_download_24" />
+        <TextView
+            android:id="@+id/tvDownloads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:text="1"
+            app:layout_constraintEnd_toEndOf="@+id/ivDownload"
+            app:layout_constraintStart_toStartOf="@+id/ivDownload"
+            app:layout_constraintTop_toBottomOf="@+id/ivDownload" />
+
+        <TextView
+            android:id="@+id/tvWrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/something_went_wrong"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

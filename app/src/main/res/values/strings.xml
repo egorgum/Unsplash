@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Unsplash</string>
+    <string name="title_home">Home</string>
+    <string name="title_collections">Collections</string>
+    <string name="title_account">Account</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="firs_recommendation">Create pictures, publish, gather an audience, get feedback!</string>
+    <string name="second_recommendation">Share with friends, collect collections</string>
+    <string name="third_recommendation">Upload your favorite pictures and track statistics</string>
+    <string name="unsplash">Unsplash</string>
+    <string name="sign_up_log_in">Sign up / Log in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="succes_auth">Login completed</string>
+    <string name="retry">Repeat please</string>
+    <string name="refresh">Refresh</string>
+    <string name="made_with">Made with</string>
+    <string name="located_in">Located in</string>
+    <string name="tags">Tags:</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="photo_is_downloaded">Photo is downloaded</string>
+    <string name="gallery">Gallery</string>
+    <string name="share_using">Share using</string>
+    <string name="storage_permissions_granted">Storage permissions granted</string>
+    <string name="storage_permissions_is_nоt_granted">Storage permissions is nоt granted</string>
+    <string name="search">Search</string>
+    <string name="search_results">Search results</string>
+    <string name="photos">Photos</string>
+    <string name="collection">Collection:</string>
+    <string name="location">Location:</string>
+    <string name="likes">Likes</string>
+    <string name="exit">Exit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="message">Are you sure you want to log out of your account?</string>
+</resources>

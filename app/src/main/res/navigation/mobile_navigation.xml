@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/onboardFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.unsplash.ui.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_searchingFragment"
+            app:destination="@id/searchingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_collections"
+        android:name="com.example.unsplash.ui.fragments.CollectionsFragment"
+        android:label="@string/title_collections"
+        tools:layout="@layout/fragment_collections" >
+        <action
+            android:id="@+id/action_navigation_collections_to_listPhotoCollectionsFragment"
+            app:destination="@id/listPhotoCollectionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.unsplash.ui.fragments.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_navigation_account_to_authorizeFragment"
+            app:destination="@id/authorizeFragment"
+            app:popUpTo="@id/navigation_account"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_account_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardFragment"
+        android:name="com.example.unsplash.ui.fragments.OnboardFragment"
+        android:label="fragment_onboard"
+        tools:layout="@layout/fragment_onboard">
+        <action
+            android:id="@+id/action_onboardFragment_to_authorizeFragment"
+            app:destination="@id/authorizeFragment"
+            app:popUpTo="@id/onboardFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/authorizeFragment"
+        android:name="com.example.unsplash.ui.fragments.AuthorizeFragment"
+        android:label="fragment_authorize"
+        tools:layout="@layout/fragment_authorize">
+        <action
+            android:id="@+id/action_authorizeFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/authorizeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedFragment"
+        android:name="com.example.unsplash.ui.fragments.DetailedFragment"
+        android:label="fragment_detailed"
+        tools:layout="@layout/fragment_detailed" >
+        <deepLink
+            app:uri="https://unsplash.com/photos/{photo_info}" />
+        <argument android:name="photo_info"
+            android:defaultValue="123"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchingFragment"
+        android:name="com.example.unsplash.ui.fragments.SearchingFragment"
+        android:label="fragment_searchingk"
+        tools:layout="@layout/fragment_searching" >
+        <action
+            android:id="@+id/action_searchingFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+        <argument
+            android:name="query"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPhotoCollectionsFragment"
+        android:name="com.example.unsplash.ui.fragments.ListPhotoCollectionsFragment"
+        android:label="fragment_list_photo_collections"
+        tools:layout="@layout/fragment_list_photo_collections" >
+        <action
+            android:id="@+id/action_listPhotoCollectionsFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+        <argument
+            android:name="tittleCollection"
+            app:argType="string" />
+        <argument android:name="id" />
+    </fragment>
+</navigation>

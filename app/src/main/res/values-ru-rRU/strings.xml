@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unsplash</string>
+    <string name="title_home">Дом</string>
+    <string name="title_collections">Коллекции</string>
+    <string name="title_account">Аккаунт</string>
+    <string name="back">Назад</string>
+    <string name="next">Далее</string>
+    <string name="firs_recommendation">Создавайте фотографии, публикуйте, собирайте аудиторию, получайте обратную связь!</string>
+    <string name="second_recommendation">Делитесь с друзьями, собирайте коллекции</string>
+    <string name="third_recommendation">Загружайте свои любимые фотографии и отслеживайте статистику</string>
+    <string name="unsplash">Unsplash</string>
+    <string name="sign_up_log_in">Зарегистрироваться / Войти</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="succes_auth">Вход в систему завершен</string>
+    <string name="retry">Повторите попытку</string>
+    <string name="refresh">Обновить</string>
+    <string name="made_with">Сделано на </string>
+    <string name="located_in">Находится в</string>
+    <string name="tags">Теги:</string>
+    <string name="something_went_wrong">Что-то пошло не так</string>
+    <string name="photo_is_downloaded">Фото загружено</string>
+    <string name="gallery">Галлерея</string>
+    <string name="share_using">Поделиться</string>
+    <string name="storage_permissions_granted">Хранение разрешено</string>
+    <string name="storage_permissions_is_nоt_granted">Хранение запрещено</string>
+    <string name="search">Поиск</string>
+    <string name="search_results">Результаты поиска</string>
+    <string name="photos">Фотографии</string>
+    <string name="collection">Коллекции:</string>
+    <string name="location">Локация:</string>
+    <string name="likes">Лайки</string>
+    <string name="exit">Выход</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="message">Вы уверены, что хотите выйти из аккаунта?</string>
+</resources>
